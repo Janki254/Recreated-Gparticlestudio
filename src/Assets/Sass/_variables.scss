@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('../Fonts/Inter_Fonts/Inter-Regular.ttf');
+}
+@font-face {
+    font-family: 'Oswald-Regular';
+    src: url('../Fonts/Oswald_Fonts/Oswald-Regular.ttf');
+}
+
+$primary-darker: rgb(249, 115, 22);
+$primary-light: rgb(245, 158, 11);
+$secondary-darker: rgb(30, 41, 59);
+$secondary-medium: rgb(100 116 139);
+$secondary-light: rgb(167, 180, 198);
+$Inter_font_family: 'Inter-Regular', sans-serif;
+$Oswald_font_family: 'Oswald-Regular', sans-serif;
+$font-size: 62.5%;
+$base-spacing: 10px;

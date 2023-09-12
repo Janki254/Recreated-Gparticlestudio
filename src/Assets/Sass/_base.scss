@@ -1,0 +1,16 @@
+body {
+    font-family: $Inter_font_family;
+    font-size: $font-size;
+    color: $secondary-light;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $Oswald_font_family;
+    color: $secondary-darker;
+    margin-bottom: 16px;
+}

@@ -1,0 +1,145 @@
+.service_section {
+    @include section_container;
+
+    & .service_section_content {
+        @include section_content;
+        & .service_title {
+            @include section_title_border;
+        }
+        & p {
+            color: $secondary-light;
+        }
+
+        & .boxBorder {
+            border-bottom: none;
+        }
+
+        & .card_holder {
+            width: 300px;
+            height: 260px;
+            border-radius: 20px;
+            color: $secondary-darker;
+            background-color: transparent;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: all 1.5s ease-in-out;
+        }
+
+        & .card_holder.expanded {
+            height: 450px;
+        }
+        & .content_overlay {
+            background: rgba($color: $primary-light, $alpha: 0.8);
+            border-radius: 20px;
+            position: absolute;
+            width: 100%;
+            height: auto;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            -webkit-transition: all 1s ease-in-out 0.5s;
+            -moz-transition: all 1s ease-in-out 0.5s;
+            transition: all 1s ease-in-out 0.5s;
+        }
+
+        & .card_holder:hover .content_overlay {
+            opacity: 1;
+        }
+
+        & .ServiceIcon {
+            background-color: $primary-light;
+            position: absolute;
+            top: 10px;
+            height: 120px;
+            width: 120px;
+            -webkit-transition: all 1s ease-in-out 0.4s;
+            -moz-transition: all 1s ease-in-out 0.4s;
+            transition: all 1s ease-in-out 0.4s;
+        }
+
+        & .card_holder:hover .ServiceIcon {
+            background-color: $secondary-darker;
+            z-index: 10;
+            top: -50px;
+        }
+
+        & .card_content {
+            position: absolute;
+            width: 100%;
+            top: 122px;
+            height: 125px;
+            overflow: hidden;
+            text-align: center;
+            -webkit-transition: all 1s ease-in-out 0.4s;
+            -moz-transition: all 1s ease-in-out 0.4s;
+            transition: all 1s ease-in-out 0.4s;
+
+            & h6 {
+                color: $secondary-light;
+                -webkit-transition: all 1s ease-in-out 0.4s;
+                -moz-transition: all 1s ease-in-out 0.4s;
+                transition: all 1s ease-in-out 0.4s;
+            }
+
+            & h5 {
+                color: $secondary-darker;
+                -webkit-transition: all 1s ease-in-out 0.4s;
+                -moz-transition: all 1s ease-in-out 0.4s;
+                transition: all 1s ease-in-out 0.4s;
+            }
+            & p {
+                color: #fff !important;
+            }
+            & button {
+                color: $primary-light;
+                border-color: $primary-light;
+                -webkit-transition: all 1s ease-in-out 0.4s;
+                -moz-transition: all 1s ease-in-out 0.4s;
+                transition: all 1s ease-in-out 0.4s;
+            }
+        }
+
+        & .card_holder:hover .card_content {
+            top: 80px;
+            & h6 {
+                color: $secondary-medium;
+            }
+            & h5,
+            & button {
+                color: #fff;
+                border-color: #fff;
+            }
+        }
+
+        & .card_holder.expanded .card_content {
+            height: 360px;
+        }
+        & .card_holder:hover .card-description {
+            text-align: center;
+            color: #fff !important;
+            -webkit-transition: all 1s ease-in-out 0.4s;
+            -moz-transition: all 1s ease-in-out 0.4s;
+            transition: all 1s ease-in-out 0.4s;
+        }
+
+        // & .card_holder.expanded .card-description {
+        //     top: 100px;
+        //     -webkit-transition: all 1s ease-in-out 0.4s;
+        //     -moz-transition: all 1s ease-in-out 0.4s;
+        //     transition: all 1s ease-in-out 0.4s;
+        // }
+    }
+}
+@media (max-width: 639px) {
+    .service_section {
+        & .service_section_content {
+            & .boxBorder {
+                border-bottom: 2px solid $secondary-medium;
+            }
+            & .boxBorder:last-of-type {
+                border-bottom: none;
+            }
+        }
+    }
+}

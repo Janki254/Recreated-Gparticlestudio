@@ -1,0 +1,54 @@
+.portfolio_section {
+    @include section_container;
+
+    & .portfolio_section_content {
+        @include section_content;
+
+        & .portfolio_title {
+            @include section_title_border;
+            border-right: none;
+            border-left: 4px solid $primary-darker;
+        }
+
+        /* styles for gallery Tabs*/
+
+        & .Portfolio_Tab .portfolio_link {
+            color: rgba($primary-darker, 1.2);
+        }
+
+        & .portfolio_link::after {
+            content: '';
+            margin-top: 0.5rem;
+            display: block;
+            width: 0;
+            height: 2px;
+            background: rgba($primary-darker, 1.2);
+            transition: width 0.3s;
+        }
+
+        & .portfolio_link:hover::after,
+        & .portfolio_link:focus::after {
+            width: 100%;
+        }
+
+        /* styles for image gallery*/
+        /* Masonry Grid */
+
+        & .masonry-grid {
+            display: flex;
+            // margin-left: -8px;
+            width: auto;
+        }
+        /* Masonry Grid Column */
+        & .masonry-grid_column {
+            // padding-left: 8px;
+            background-clip: padding-box;
+            & .image_overlay::after {
+                transition: all ease 0.55s;
+            }
+            & .img_Overlay_text {
+                color: $primary-darker;
+            }
+        }
+    }
+}

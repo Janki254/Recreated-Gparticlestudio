@@ -1,0 +1,75 @@
+.About_Bg {
+    @include section_container;
+
+    & .about_section_content {
+        @include section_content;
+
+        & h3 {
+            color: $secondary-medium;
+        }
+
+        & p {
+            color: $secondary-light;
+        }
+
+        & .about_img_bg img {
+            height: 400px;
+            width: 580px;
+            object-fit: cover;
+        }
+
+        & .about_offerlist {
+            background-color: $primary-light;
+        }
+
+        & .about_counter {
+            & .counter {
+                font-size: 60px;
+            }
+        }
+    }
+
+    & .testimonial {
+        background-color: #fff;
+        border-radius: 25px;
+        height: auto;
+
+        & .testimonial_img {
+            // border: 2px solid $secondary-light;
+            border-radius: 50%;
+            height: 95px;
+            overflow: hidden;
+            width: 95px;
+        }
+
+        & p {
+            text-align: 1rem;
+        }
+    }
+
+    & .swiper-button-next {
+        height: 25px;
+        width: 25px;
+        background-color: $secondary-darker;
+        padding: 1rem;
+        border-radius: 50%;
+        color: #fff;
+    }
+    & .swiper-button-prev {
+        height: 25px;
+        width: 25px;
+        background-color: $secondary-darker;
+        padding: 1rem;
+        border-radius: 50%;
+        color: #fff;
+    }
+
+    & .swiper-button-next::after {
+        font-size: 22px;
+        margin-left: 5px;
+    }
+    & .swiper-button-prev::after {
+        font-size: 22px;
+        margin-right: 5px;
+    }
+}
